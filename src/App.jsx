@@ -1,121 +1,137 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
+
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <div className="app">
+      <header className="navbar">
+        <a className="brand" href="#inicio">
+          <span className="brand-icon">🍽️</span>
+          <span>LaEsquina<span className="brand-accent">DelSabor</span></span>
+        </a>
 
-      <div className="ticks"></div>
+        <nav className="nav-links">
+          <a href="#inicio">Inicio</a>
+          <a href="#menu">Menú</a>
+          <a href="#nosotros">Nosotros</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+        <a className="nav-button" href="#reservas">Reservar mesa</a>
+      </header>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+      <main>
+        <section className="hero-section" id="inicio">
+          <div className="hero-content">
+            <span className="eyebrow">BIENVENIDO A NUESTRA CASA</span>
+            <h1>El sabor que<br />te hace sentir <span>en casa.</span></h1>
+            <p>
+              Disfruta platos deliciosos, ingredientes frescos
+              y momentos especiales alrededor de la mesa.
+            </p>
+
+            <div className="hero-actions">
+              <a className="primary-button" href="#menu">Explorar menú ↗</a>
+              <a className="secondary-button" href="#reservas">Reservar una mesa</a>
+            </div>
+
+            <div className="hero-note">
+              <span>✦</span> Hecho con amor, servido con sabor.
+            </div>
+          </div>
+
+          <div className="hero-visual">
+            <div className="food-circle">
+              <span className="food-emoji">🍔</span>
+              <span className="floating-food food-one">🍟</span>
+              <span className="floating-food food-two">🥤</span>
+            </div>
+            <div className="food-label">
+              <span>★ ★ ★ ★ ★</span>
+              <strong>¡Mucho sabor en cada bocado!</strong>
+            </div>
+          </div>
+        </section>
+
+        <section className="features">
+          <article>
+            <span className="feature-icon">🥬</span>
+            <div>
+              <h3>Ingredientes frescos</h3>
+              <p>Calidad en cada preparación.</p>
+            </div>
+          </article>
+          <article>
+            <span className="feature-icon">👨‍🍳</span>
+            <div>
+              <h3>Preparado al momento</h3>
+              <p>El sabor que mereces.</p>
+            </div>
+          </article>
+          <article>
+            <span className="feature-icon">❤️</span>
+            <div>
+              <h3>Atención cercana</h3>
+              <p>Nos encanta recibirte.</p>
+            </div>
+          </article>
+        </section>
+
+        <section className="menu-section" id="menu">
+          <span className="eyebrow">NUESTROS FAVORITOS</span>
+          <h2>Un menú para <span>disfrutar</span></h2>
+          <p>Descubre algunas de las opciones que tenemos para ti.</p>
+
+          <div className="menu-grid">
+            <article className="menu-card">
+              <div className="dish-image">🍔</div>
+              <div className="dish-info">
+                <span className="dish-tag">MÁS PEDIDO</span>
+                <h3>Hamburguesa de la casa</h3>
+                <p>Una combinación irresistible de sabor.</p>
+                <strong>Consulta nuestro menú</strong>
+              </div>
+            </article>
+            <article className="menu-card">
+              <div className="dish-image">🍕</div>
+              <div className="dish-info">
+                <span className="dish-tag">PARA COMPARTIR</span>
+                <h3>Pizza especial</h3>
+                <p>Ideal para disfrutar con tus personas favoritas.</p>
+                <strong>Consulta nuestro menú</strong>
+              </div>
+            </article>
+            <article className="menu-card">
+              <div className="dish-image">🍟</div>
+              <div className="dish-info">
+                <span className="dish-tag">EL ACOMPAÑANTE</span>
+                <h3>Papas crocantes</h3>
+                <p>Doradas, crujientes y deliciosas.</p>
+                <strong>Consulta nuestro menú</strong>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section className="reservation-section" id="reservas">
+          <div>
+            <span className="eyebrow">TU PRÓXIMO MOMENTO FAVORITO</span>
+            <h2>¡Tu mesa te está esperando!</h2>
+            <p>Pronto podrás gestionar tus reservas directamente desde nuestra plataforma.</p>
+          </div>
+          <a className="primary-button" href="#contacto">Contáctanos ↗</a>
+        </section>
+      </main>
+
+      <footer id="contacto">
+        <a className="brand" href="#inicio">
+          <span className="brand-icon">🍽️</span>
+          <span>LaEsquina<span className="brand-accent">DelSabor</span></span>
+        </a>
+        <p>Buenos momentos, grandes sabores.</p>
+        <span>© 2026 LaEsquinaDelSabor</span>
+      </footer>
+    </div>
   )
 }
 
