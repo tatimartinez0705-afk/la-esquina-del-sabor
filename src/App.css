@@ -497,3 +497,103 @@ footer p, footer > span {
     align-items: flex-start;
   }
 }
+
+/* Contenedor principal del formulario para registrar platillos. */
+.formulario-platillo {
+  max-width: 720px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #fffaf3;
+  border: 1px solid #f0dfcb;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(90, 55, 25, 0.08);
+}
+
+/* Título y texto introductorio del formulario. */
+.formulario-platillo h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #57351f;
+  font-size: 1.5rem;
+}
+
+.formulario-platillo > p {
+  color: #78695d;
+  line-height: 1.5;
+}
+
+/* Organiza los campos en una sola columna. */
+.formulario-platillo form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+/* Identifica cada campo del formulario. */
+.formulario-platillo label {
+  margin-top: 8px;
+  color: #57351f;
+  font-weight: 600;
+}
+
+/* Da un estilo uniforme a las entradas de texto y selección. */
+.formulario-platillo input,
+.formulario-platillo textarea,
+.formulario-platillo select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  border: 1px solid #dfcbb7;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #382719;
+  font: inherit;
+}
+
+/* Resalta el campo que está seleccionado. */
+.formulario-platillo input:focus,
+.formulario-platillo textarea:focus,
+.formulario-platillo select:focus {
+  outline: 2px solid #e9a05b;
+  border-color: #c96d2d;
+}
+
+/* Permite cambiar el tamaño vertical de la descripción. */
+.formulario-platillo textarea {
+  resize: vertical;
+}
+
+/* Botón principal para guardar el platillo. */
+.formulario-platillo button {
+  margin-top: 14px;
+  padding: 13px 18px;
+  border: none;
+  border-radius: 10px;
+  background-color: #c96d2d;
+  color: #ffffff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* Cambia el color del botón al pasar el cursor. */
+.formulario-platillo button:hover {
+  background-color: #a9511d;
+}
+
+/* Indica visualmente que el botón está deshabilitado. */
+.formulario-platillo button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* Adapta los espacios del formulario a pantallas pequeñas. */
+@media (max-width: 600px) {
+  .formulario-platillo {
+    margin: 28px 16px;
+    padding: 20px;
+  }
+}
+
