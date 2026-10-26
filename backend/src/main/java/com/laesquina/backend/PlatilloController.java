@@ -32,8 +32,8 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
-// Permite las solicitudes desde React en el puerto actual del frontend.
-@CrossOrigin(origins = "http://localhost:5174")
+// Permitir que el frontend de React acceda al backend desde el puerto actual.
+@CrossOrigin(origins = {"http://localhost:5173", "http://localhost:5174"})
 @RestController
 @RequestMapping("/api/platillos")
 public class PlatilloController {
